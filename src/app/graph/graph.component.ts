@@ -53,6 +53,7 @@ export class GraphComponent implements OnInit {
   getWeather() {
     this.historicalWeather.getWeather(this.graphData.startDate, this.graphData.endDate).subscribe(weather => {
       this.data = weather;
+      this.averages = [];
       weather.forEach(element => {
         const date = new Date(element.date);
         this.averages.push([Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()), element.averageTemp]);
