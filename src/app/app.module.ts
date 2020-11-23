@@ -7,7 +7,15 @@ import { AppComponent } from './app.component';
 import { GraphComponent } from './graph/graph.component';
 import { InputsComponent } from './inputs/inputs.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDatepickerModule, MatDatepickerInput } from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import { DatePipe } from '@angular/common';
+import { GraphDataService } from './services/graph-data.service';
+import { HistoricalWeatherServiceService } from './services/historical-weather-service.service';
+import { EnergyUsageServiceService } from './services/energy-usage-service.service';
 
 @NgModule({
   declarations: [
@@ -17,14 +25,23 @@ import { MatDatepickerModule, MatDatepickerInput } from '@angular/material/datep
   ],
   imports: [
     BrowserModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    MatButtonModule,
     AppRoutingModule,
     HttpClientModule,
     HighchartsChartModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
-    MatDatepickerInput
+    MatNativeDateModule,
+    MatFormFieldModule
   ],
-  providers: [],
+  providers: [
+    DatePipe,
+    GraphDataService,
+    HistoricalWeatherServiceService,
+    EnergyUsageServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

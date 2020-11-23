@@ -13,7 +13,6 @@ export class HistoricalWeatherServiceService {
   }
 
   getWeather(startDate: string, endDate: string): Observable<HistoricalWeather[]>{
-    console.log('inside of weather service');
     const options = { params: new HttpParams()
       .set('startDate', startDate)
       .set('endDate', endDate)};
