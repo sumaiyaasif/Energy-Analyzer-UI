@@ -27,6 +27,7 @@ export class GraphComponent implements OnInit {
       series: [
       {
         type: 'line',
+        name: 'Average Temp',
         data: this.averages
       }
       ],
