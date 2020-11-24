@@ -11,11 +11,12 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { DatePipe } from '@angular/common';
 import { GraphDataService } from './services/graph-data.service';
 import { HistoricalWeatherServiceService } from './services/historical-weather-service.service';
 import { EnergyUsageServiceService } from './services/energy-usage-service.service';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { EnergyUsageServiceService } from './services/energy-usage-service.servi
   ],
   imports: [
     BrowserModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
     AppRoutingModule,
@@ -34,7 +35,8 @@ import { EnergyUsageServiceService } from './services/energy-usage-service.servi
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatRadioModule
   ],
   providers: [
     DatePipe,

@@ -8,5 +8,7 @@
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-date-range-picker #picker></mat-date-range-picker>
 </mat-form-field>
-
+<mat-radio-group aria-label="Select an option" [(ngModel)]="temperatureScale">
+  <mat-radio-button *ngFor="let scale of scales" [value]="scale">{{scale}}</mat-radio-button>
+</mat-radio-group>
 <button mat-stroked-button color="primary" (click)="getDates()">Primary</button>

@@ -56,6 +56,9 @@ export class GraphComponent implements OnInit {
       this.averages = [];
       weather.forEach(element => {
         const date = new Date(element.date);
+        if (this.graphData.temperatureScale == 'Fahrenheit'){
+          element.averageTemp = element.averageTemp * 9.0 / 5.0 + 32;
+        }
         this.averages.push([Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()), element.averageTemp]);
       });
       this.fillChart();
