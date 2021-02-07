@@ -14,8 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { DatePipe } from '@angular/common';
 import { GraphDataService } from './services/graph-data.service';
-import { HistoricalWeatherServiceService } from './services/historical-weather-service.service';
-import { EnergyUsageServiceService } from './services/energy-usage-service.service';
+import { HistoricalWeatherService} from './services/historical-weather-service.service';
+import { EnergyUsageService } from './services/energy-usage-service.service';
 import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
@@ -41,8 +41,8 @@ import { MatRadioModule } from '@angular/material/radio';
   providers: [
     DatePipe,
     GraphDataService,
-    HistoricalWeatherServiceService,
-    EnergyUsageServiceService
+    HistoricalWeatherService,
+    EnergyUsageService
   ],
   bootstrap: [AppComponent]
 })

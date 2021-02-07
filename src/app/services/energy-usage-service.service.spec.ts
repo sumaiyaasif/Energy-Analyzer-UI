@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EnergyUsageServiceService } from './energy-usage-service.service';
+import { EnergyUsageService} from './energy-usage-service.service';
 
-describe('EnergyUsageServiceService', () => {
-  let service: EnergyUsageServiceService;
+describe('EnergyUsageService', () => {
+  let service: EnergyUsageService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(EnergyUsageServiceService);
+    service = TestBed.inject(EnergyUsageService);
   });
 
   it('should be created', () => {
